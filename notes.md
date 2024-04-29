@@ -13,3 +13,57 @@ student.splice(element.Index, 1)  (Agar element.Index ke baad kuch nahi likha to
 return `student $(name) removed successfully
 
 }
+
+
+# Object Or Map
+
+* Object
+const studentRegistry ={
+    1: "Rahul",
+    2: "Kumar",
+    3: "Chahar"
+}
+console.log(studentTegistry);
+
+Output : {'1': 'Rahul','2': 'Kumar','3': 'Chahar'}
+
+* Isne number koh 1,2,3 koh bhi String mein convert kar diya magar hame aise nahi chaiye tha joh hai wahi chaiye tha is disadvatage koh Map solve karta hai
+
+* Map
+const studentRegistryMap = new Map{
+    [
+        [1, "Rahul"],
+        [2, "Kumar"],
+        [3, "Chahar"]
+    ]
+}
+console.log(studentRegistryMap);
+
+Output : Map(3) {1=> 'Rahul', 2=> 'Kumar', 3=> 'Chahar'}
+
+* Object ka joh disadvatage tha bou Map ne solve kar diya
+
+# Array or Set
+
+* Array
+const emailIds = ["rahul@pw.live", kumar@pw.live", "rahul@pw.live"]
+
+// Loop way of removing duplicated
+
+let uniqueEmailIds = []
+
+for(let i =0; i< emailIds.length; i++){
+    if(!uniqueEmailIds.includes(emailIds[i])){
+        uniqueEmailIds.push(emailIds[i])
+    }
+}
+console.log(uniqueEmailIds);
+
+Output : 'rahul@pw.live', 'kumar@pw.live'
+
+* Set
+console.log(new Set(emailIds));
+
+output : 'rahul@pw.live', 'kumar@pw.live'
+
+# Set duplicate allowed nahi karta 
