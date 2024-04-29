@@ -100,3 +100,5 @@ Note: The function that we pass as an argument to another function is called the
 1-> visits each element
 2-> accumulate / gather
 3-> return the value
+
+
