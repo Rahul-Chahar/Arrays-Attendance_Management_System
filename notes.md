@@ -67,3 +67,36 @@ console.log(new Set(emailIds));
 output : 'rahul@pw.live', 'kumar@pw.live'
 
 # Set duplicate allowed nahi karta 
+
+
+
+# Callback
+* function returning another function
+Note: The function that we pass as an argument to another function is called the callback function. Note: Functions such as filter(), map(), reduce(), some(), etc, all are examples of Higher-Order Functions.
+
+
+# foreach
+* ye method kuch bhi return nahi karta ye sirf visit karke aata hai 
+
+
+# foreach or Map
+
+* foreach
+1-> visits each element
+2-> reuturns nothing
+
+* Map
+1-> visits each element
+2-> reuturns new array
+
+# filter
+1-> visits each elements
+2-> condition
+3-> returns condition satisfied output
+
+
+# Reduce 
+* final output is in single output
+1-> visits each element
+2-> accumulate / gather
+3-> return the value
