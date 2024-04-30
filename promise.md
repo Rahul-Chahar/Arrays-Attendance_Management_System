@@ -74,3 +74,74 @@ promise
 .finally(() => {
     console.log('stop loader');
 });
+
+
+
+# Promise Methods
+* 1-> Promise.all()
+* 2-> Promise.any()
+* 3-> Promise.resolve()
+* 4-> Promise.reject()
+
+# promise.all()
+* isme ek promise mein hi multiple promise houte hai
+
+const promise1 = new Promise(function(resolve){
+    resolve('first');
+})
+const promise2 = new Promise(function(resolve){
+    resolve('second');
+})
+const promise3 = new Promise(function(resolve){
+    resolve('third');
+})
+
+const allPromises = [promise1, promise2, promise3];
+
+Promise.all(allPromises)
+.then(res => console.log(res));
+
+* Output
+['first','second','third']
+
+
+# promise.any()
+* ye OR gate ki trha kaam karta hai ise jaise hi sabse phela joh bhi successful mil jayega ye ous ke saath hi deal karega
+
+const promise1 = new Promise(function(resolve, reject){
+    resolve('first');
+})
+const promise2 = new Promise(function(resolve){
+    resolve('second');
+})
+const promise3 = new Promise(function(resolve){
+    resolve('third');
+})
+
+const anyPromises = [promise1, promise2, promise3];
+
+Promise.any(anyPromises)
+.then(response => console.log(response));
+
+* Output
+"Second"
+
+
+# promise.resolve()
+* is case mein aisa promise create kar rhe hai joh shuru houte hi resolve hou jaata hai
+direct resolve
+
+const promise = Promise.resolve('first');
+promise.then(response => console.log(response));
+
+* Output
+'first'
+
+# promise.reject()
+* aisa promise joh direct reject ki state mein create houta hai
+
+const promise = Promise.reject('first');
+promise.catch(response => console.log(response));
+
+* Output
+'first'
