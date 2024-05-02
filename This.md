@@ -185,3 +185,165 @@ Chahar TV has been fixed
 ============================================
 
 # Math/String/Date
+
+# Math
+```
+console.log(typeof Math)
+```
+## Output
+Object
+
+### Minimum of two numbers
+```
+console.log(Math.min(5,-7)
+```
+Output
+-7
+
+### Getting all the properties of the object Math
+```
+console.log(Object.getOwnPropertyNames(Math))
+```
+
+=================
+# String
+* Immutable -> something can not be change
+* Sequence of characters
+
+```
+let name = "Rahul" // "" or ''
+```
+### Access the character based on the index
+```
+console.log(name[2])
+```
+## Output
+h
+
+### immutable
+```
+name[2]="L"
+console.log(name)
+```
+## Output
+Rahul
+
+### length
+```
+console.log(name.length)
+```
+## Output
+5
+
+### Find the character at any given index
+```
+console.log(name[2])
+console.log(name.at(2))       // you can also put negative index 
+console.log(name.charAt(2))
+```
+## Output
+h
+
+h
+
+h
+
+* name.at(-2)   // at method support negative indexing 
+* output -> u 
+
+### String concatenation
+```
+first_name = 'Rahul'
+last_name = 'Chahar'
+full_name = first_name + last_name
+or
+full_name = first_name.concat(last_name)
+console.log(full_name)
+```
+## Output
+Rahul Chahar
+
+### Search a substring in a given string
+```
+str = "I am mad for teaching"
+console.log(str.includes("mad"))
+console.log(str.includes("Rahul"))
+```
+## Output
+* true
+* false
+
+### I want to know the starting index of sub string
+```
+console.log(str.indexOf("mad"))
+console.log(str.indexOf("Rahul"))
+```
+## Output
+* 5
+* -1
+
+### I want to repeat e string
+```
+console.log("Hello ".repeat(11))
+```
+## Output
+Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello
+
+### Replace sub String
+```
+str = " I am Rahul Kumar Kumar"
+console.log(str.replace("Kumar","Singh"))
+console.log(str.replaceAll("Kumar", "Chahar:))
+```
+## Output
+I am Rahul Singh Kumar
+
+I am Rahul Chahar Chahar
+
+
+# String Slicing
+## slice 
+```
+str = "Rahul Chahar"
+console.log(str.slice(4,8))
+console.log(str.slece(4))
+console.log(str.slice(-1))
+console.log(str.slice(-3))
+```
+## Output
+* l ch
+* l chahar
+* r
+* har
+
+
+### convert string to an array
+```
+arr = str.split("")
+console.log(arr)
+```
+## Output
+['R','a','h'......
+...'r']
+
+```
+arr1 = str.split(" ")
+console.log(arr1)
+```
+['Rahul' 'Chahar']
+
+```
+str = "Rahul$Singh$Chahar"
+arr = str.split("$")
+console.log(arr)
+```
+## Output
+['Rahul', 'Singh', 'Chahar']
+
+```
+arr =["I","am","Rahul"]
+console.log(arr.join(","))
+```
+## Output
+I,am,Rahul
+
