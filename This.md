@@ -1,26 +1,36 @@
 # This
-`function func(){
-console.log(this)
+Here's the corrected and clearer version of the text you provided:
+
+```
+function func() {
+  console.log(this);
 }
-func();`
+
+func();
+```
+
+
 * now this refers to a global object
 * Agar ham aise hi direct use krte hai this toh bou global object koh refers karta hai
 
 ## Using this inside the js objects
-`const obj ={
+```
+const obj ={
 name : 'Rahul',
 age : 99,
 greet : function(){
 console.log(this.name)
 }
-}`
+}
+```
 ## Output
 Rahul
 * jab ham function ke ander this koh use karte hai toh bou reffer karta hai apne object koh
 * referring to the object it's part of
 
 
-`const obj ={
+```
+const obj ={
 name : 'Rahul',
 age : 99,
 greet : function(){
@@ -30,7 +40,8 @@ city : 'Mathura',
 country : this.name + " " + "India"
 }
 }
-console.log(obj.address.conuntry)`
+console.log(obj.address.conuntry)
+```
 
 ## Output
 Undefined India
@@ -38,8 +49,8 @@ Undefined India
 * Jab bhi ham this koh outside the function use kregye in the object, which always refers to the global object.
 
 =========
-
-`const obj ={
+```
+const obj ={
 name : 'Rahul',
 age : 99,
 greet : function(){
@@ -53,10 +64,11 @@ console.log(this.name)
 }
 }
 }
-obj.address.greet1()`
+obj.address.greet1()
 
 }
 }
+```
 ## Output
 Chahar
 
