@@ -255,5 +255,20 @@ console.log(tranformed_fruits)
 ```
 
 ***Note-> 
-forEach -> Same array is changed
-Map -> new array is created***
+forEach -> not create new array also not change the orignial array***
+
+***Map -> new array is created***
+
+***filter -> new array is created***
+
+# filter
+```
+even_elements = [1,2,3,4,5,6,7,8,9,10].filter((num) => num%2 == 0)
+print(even_elements)
+
+
+#Output
+2,4,6,8,10
+```
+* filter bhi change nahi karta original array koh ye bhi new create karta hai
+
