@@ -125,4 +125,24 @@ console.log("Kitne aur relationship banau")
 
 **Note-:**
 
-***Jab logo koh promise ka syntax complex lagne laga or unhone js waalou koh bola ki bhai kuch karo java c++ ki trha kuch kro toh js waalou ne bola never***
+***Jab logo koh promise ka syntax complex lagne laga or unhone Js waalou koh bola ki bhai kuch karo java c++ ki trha kuch kro toh Js waalou ne bola never ham nahi kar skte kyu ki java or c++ toh mota bhai hai mein toh gareeb hu kyuki java or c++ ke pass toh multiple thread hai mere pass toh bss single thread hai java or c++ toh synchornous kar skte hai magar mujhe toh asynchonous karna pdega***
+
+***phir logo ne bola thik hai bhai magar phir bhi kuch dekhou tab Js wwaale bole thik Async Await ka concept use karte hai***
+
+***Async Await -> ye ek saath use houte hai without Async ke Await nahi laga skte Await use karne ke liye Async lagana jaruri hai***
+
+```
+async function printMessage(){
+return "Hello Students"
+}
+console.log(printMessage())
+
+printMessage().then(msg => console.log(msg))
+
+#Output
+Promise {"Hello Students")
+Hello Students
+```
+***yaha hamne jaise hi function ke aage async keyword lagaya these trasform the function into an asynchronous function, asynchronous function is nothing but a Promise***
+
+***Await tab use karte hai jab hame asychronous data chaiye or without ouske aage nahi jaana hai toh ham Await ka use karte hai Await lagane se bou aage nahi jaayega jab tak data nahi aajta yaha resoponse***
