@@ -185,3 +185,73 @@ first line
 last line
 Hello Students
 This line should be the last print
+```
+
+
+# Closures
+
+```
+function fn() {
+  let name = "Rahul";
+  console.log(name);
+}
+fn();
+console.log(name);
+
+
+Output
+Rahul
+Error -: line number 199
+kyun joh name hai bou function ke ander define kiya hai
+```
+
+***Somehow I want to magically get hold of function variables even after their execution***
+
+***ye hou skata hai Closures ki help se***
+
+```
+function outerFn(){
+    let outerVar = "I am from outer fn"
+    function innerFn(){
+        console.log(outerVar)
+    }
+    return innerFn()   -------> its returning a function
+}
+const fn = outerFn()   --------> yaha outerFn execute hougya hai toh ouske ander sab destroy hojana chaiye.
+
+fn()
+
+
+OUTPUT
+I am from outer fn
+```
+
+
+***Closuser used for Encapsulation***
+
+```
+function customerCounter(){
+    let count =0
+    return function(){
+          count++
+          console.log("New customer count is ", count)
+    }
+  }
+  let counter = customerCounter()
+
+counter()
+counter()
+counter()
+
+
+Output
+New customer count is 1
+New customer count is 2
+New customer count is 3
+```
+***let count =0 ye encapsulate hai***
+
+**Lexical Scope**
+***jha se function call houta hai ous pure reason koh lexical scope bolte hai***
+
+***for example -> jaise mein kaha se padai kar raha hu ....... mein apne room se padai kar raha hu toh mera room pura Lexical Scope hai***
