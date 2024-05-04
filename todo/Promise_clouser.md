@@ -21,16 +21,16 @@ console.log("Where is my tinder !")
 #Output
 Message from my girl : Yaay, shaadi ki tayyari karo
 My life is set !!!
-finally I am clear
+finally, I am clear
 
 ```
 
-* resolve -> its always postive scenario
+* resolve -> It is always postive scenario
 
-* reject -> its always negative scenario
+* reject -> It is always negative scenario
 
 #### Where we use Promises in the world of Js
-* Jha bhi asychronous process karna hai waha promise is go to root its a new frined for us!
+* Jha bhi asynchronous process karna hai waha promise is going to root it's a new friend for us!
 
 
 # Promise.all
@@ -66,7 +66,7 @@ if(Math.random () > 0.5){
 })
 
 /**
-* Only if all of them comes, I will marry , else not marry
+* Only if all of them come, I will marry, else not marry
 */
 
 const friendPromises = [dost1Promise, dost2Promise, dost3Promise]
@@ -146,3 +146,42 @@ Hello Students
 ***yaha hamne jaise hi function ke aage async keyword lagaya these trasform the function into an asynchronous function, asynchronous function is nothing but a Promise***
 
 ***Await tab use karte hai jab hame asychronous data chaiye or without ouske aage nahi jaana hai toh ham Await ka use karte hai Await lagane se bou aage nahi jaayega jab tak data nahi aajta yaha resoponse***
+
+```
+function printHelloAfterWait() {
+  setTimeout(() => {
+    console.log("Hello Students");
+  }, 3000);
+  console.log("This line should be the last print");
+}
+printHelloAfterWait();
+
+Output
+This line should be the last print
+Hello Students
+```
+
+***Magar mein wait karna chaata hu setTimeout par phele Hello students print hou ouske baad ham neeche jaaye or print hou this line should be the last print***
+
+***Is problem koh solve karne ke krne ke liye use kregye Await ka***
+```
+async function printHelloAfterWait() {
+
+//await is always applied to promise
+let result = await new Promise((resolve,reject) =>{
+  setTimeout(() => {
+    resolve("Hello Students");
+  }, 3000)
+})
+console.log(result)
+  console.log("This line should be the last print");
+}
+console.log("first line")
+printHelloAfterWait();
+console.log("last line")
+
+Output
+first line
+last line
+Hello Students
+This line should be the last print
