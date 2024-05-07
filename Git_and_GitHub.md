@@ -23,7 +23,9 @@ git status
 
 
 1-> git add file.txt
+
 2-> git status
+
 3-> git commit -m 
 
 
